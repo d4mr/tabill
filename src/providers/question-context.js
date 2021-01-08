@@ -18,7 +18,7 @@ function QuestionProvider(props) {
         let newQuestion;
         while (true) {
             newQuestion = generateNewQuestion();
-            if (newQuestion[0] != question[0] || newQuestion[1] != question[1]) break;
+            if (newQuestion[0] !== question[0] || newQuestion[1] !== question[1]) break;
         }
         setQuestion(newQuestion);
     }

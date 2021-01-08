@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import FullPager from '../../components/FullPager';
-import { useOptions } from '../../providers/options-context';
+// import { useOptions } from '../../providers/options-context';
 import { useQuestion } from '../../providers/question-context';
 
 import Fire from '../../assets/fire.svg'
@@ -21,7 +21,7 @@ export default function Home() {
     const [streak, setStreak] = useState(0);
     const [timer, setTimer] = useState();
 
-    const { maxMultiple, setMaxMultiple, tablesBeingAsked, setTablesBeingAsked } = useOptions();
+    // const { maxMultiple, setMaxMultiple, tablesBeingAsked, setTablesBeingAsked } = useOptions();
     const { question, nextQuestion } = useQuestion();
 
     function showCorrectAnswer() {
@@ -29,9 +29,7 @@ export default function Home() {
         clearTimeout(timer);
         setTimer(null);
         setAnswerStatus("correcting");
-        setTimeout(() => {
-            moveToNextQuestion()
-        }, 700)
+        setTimeout(moveToNextQuestion, 700)
     }
 
     function moveToNextQuestion() {
@@ -50,7 +48,7 @@ export default function Home() {
                 setTimer(null);
                 setBg("bg-red-300");
                 setAnswerColor("text-red-700");
-                setTimeout(showCorrectAnswer, 400);
+                setTimeout(() => showCorrectAnswer(), 400);
                 break;
             case "correct":
                 setStreak(streak + 1);
@@ -58,7 +56,7 @@ export default function Home() {
                 setTimer(null);
                 setBg("bg-green-300");
                 setAnswerColor("text-green-700");
-                setTimeout(moveToNextQuestion, 400);
+                setTimeout(() => moveToNextQuestion(), 400);
                 break;
             case "correcting":
                 clearTimeout(timer);
@@ -71,12 +69,13 @@ export default function Home() {
                 setAnswerColor("");
                 break;
         }
-    }, [answerStatus]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [answerStatus, streak, timer]);
 
     useEffect(() => {
-        if (answerInput > question[2]) {
+        if (Number(answerInput) > question[2]) {
             setAnswerStatus("wrong");
-        } else if (answerInput == question[2]) {
+        } else if (Number(answerInput) === question[2]) {
             setAnswerStatus("correct");
         }
     }, [answerInput, question, timer]);
@@ -93,7 +92,7 @@ export default function Home() {
             <div className="flex-grow flex flex-col justify-center items-center">
                 <CountdownCircleTimer
                     key={question}
-                    isPlaying={timer?true:false}
+                    isPlaying={timer ? true : false}
                     duration={2}
                     size={120}
                     colors="#A30000"
@@ -105,12 +104,12 @@ export default function Home() {
                 </CountdownCircleTimer>
                 <div className="text-6xl sm:text-8xl flex mx-auto items-center">
                     <div className="pr-4">{question[0]} x {question[1]} =</div>
-                    <div className={["p-5", answerColor ? answerColor : "bg-red-100", !answerInput.trim() ? "w-16 h-24 sm:w-20 sm:h-36" : ""].join(" ")}>{answerStatus == "correcting" ? question[2] : answerInput}</div>
+                    <div className={["p-5", answerColor ? answerColor : "bg-red-100", !answerInput.trim() ? "w-16 h-24 sm:w-20 sm:h-36" : ""].join(" ")}>{answerStatus === "correcting" ? question[2] : answerInput}</div>
                 </div>
             </div>
 
             <div className="absolute top-0 left-0 w-0 h-1 overflow-hidden">
-                <input type="number" className="block m-0 p-0 w-1 outline-none border-none" autoFocus={true} onBlur={({ target }) => target.focus()} value={answerInput} onChange={(e) => (answerStatus == "answering") && setAnswerInput(e.target.value)} />
+                <input type="number" className="block m-0 p-0 w-1 outline-none border-none" autoFocus={true} onBlur={({ target }) => target.focus()} value={answerInput} onChange={(e) => (answerStatus === "answering") && setAnswerInput(e.target.value)} />
             </div>
 
         </FullPager>
