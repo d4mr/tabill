@@ -29,7 +29,7 @@ export default function Home() {
         clearTimeout(timer);
         setTimer(null);
         setAnswerStatus("correcting");
-        setTimeout(moveToNextQuestion, 700)
+        setTimeout(moveToNextQuestion, 700);
     }
 
     function moveToNextQuestion() {
@@ -70,7 +70,7 @@ export default function Home() {
                 break;
         }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [answerStatus, streak, timer]);
+    }, [answerStatus]);
 
     useEffect(() => {
         if (Number(answerInput) > question[2]) {
