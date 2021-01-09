@@ -86,8 +86,9 @@ export default function Game() {
     //     : 
 
     return <>
-        <FullPager noScroll flexCol className={bg}>
-            <div className="flex-grow flex flex-col justify-center items-center">
+        <FullPager noScroll flexCol className="bg-doodle-pattern">
+            <div className={["absolute h-full w-full top-0 left-0 opacity-70", bg?bg:""].join(" ")}></div>
+            <div className="z-10 flex-grow flex flex-col justify-center items-center">
                 <div>
                     <CountdownTimer
                         className="h-20 w-20 sm:h-36 sm:w-36"
@@ -106,7 +107,7 @@ export default function Game() {
                 </div>
                 <div className="text-6xl sm:text-8xl flex mx-auto items-center py-20">
                     <div className="pr-4">{question[0]} x {question[1]} =</div>
-                    <div className={["p-5", answerColor ? answerColor : "bg-red-100", !answerInput.trim() ? "w-16 h-24 sm:w-20 sm:h-36" : ""].join(" ")}>{answerStatus === "correcting" ? question[2] : answerInput}</div>
+                    <div className={["p-5", answerColor ? answerColor : "bg-red-100 hand-drawn-border border-4 border-black", !answerInput.trim() ? "w-16 h-24 sm:w-20 sm:h-36" : ""].join(" ")}>{answerStatus === "correcting" ? question[2] : answerInput}</div>
                 </div>
             </div>
 
