@@ -4,7 +4,8 @@ import FullPager from '../../components/FullPager';
 import { useQuestion } from '../../providers/question-context';
 
 import Fire from '../../assets/images/fire.svg'
-import { CountdownCircleTimer } from 'react-countdown-circle-timer';
+import { colors } from "tailwindcss/defaultTheme";
+import CountdownTimer from '../../components/CountdownTimer';
 
 // import { Redirect } from 'react-router-dom';
 // import PrimaryButton from '../../components/PrimaryButton';
@@ -55,7 +56,7 @@ export default function Game() {
                 setTimer(null);
                 setBg("bg-green-300");
                 setAnswerColor("text-green-700");
-                setTimeout(() => {moveToNextQuestion(); setTimer(setTimeout(showCorrectAnswer, 2000));}, 400);
+                setTimeout(() => { moveToNextQuestion(); setTimer(setTimeout(showCorrectAnswer, 2000)); }, 400);
                 break;
             case "correcting":
                 clearTimeout(timer);
@@ -68,7 +69,7 @@ export default function Game() {
                 setAnswerColor("");
                 break;
         }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [answerStatus]);
 
     useEffect(() => {
@@ -86,21 +87,23 @@ export default function Game() {
 
     return <>
         <FullPager noScroll flexCol className={bg}>
-            <h1 className="text-4xl mx-auto">Tabill: the table drill</h1>
-
             <div className="flex-grow flex flex-col justify-center items-center">
-                <CountdownCircleTimer
-                    key={question}
-                    isPlaying={timer ? true : false}
-                    duration={2}
-                    size={120}
-                    colors="#A30000"
-                >
-                    <div className="text-3xl text-yellow-600 sm:text-5xl flex mx-auto items-center">
-                        <img src={Fire} alt="Streak" className="h-8 sm:h-12" />
-                        {streak}
-                    </div>
-                </CountdownCircleTimer>
+                <div>
+                    <CountdownTimer
+                        className="h-20 w-20 sm:h-36 sm:w-36"
+                        key={question}
+                        isPlaying={timer ? true : false}
+                        duration={2}
+                        color={colors.green[700]}
+                    >
+                        <div>
+                            <div className="text-3xl text-yellow-600 sm:text-5xl flex mx-auto items-center ">
+                                <img src={Fire} alt="Streak" className="h-8 sm:h-12" />
+                                {streak}
+                            </div>
+                        </div>
+                    </CountdownTimer>
+                </div>
                 <div className="text-6xl sm:text-8xl flex mx-auto items-center py-20">
                     <div className="pr-4">{question[0]} x {question[1]} =</div>
                     <div className={["p-5", answerColor ? answerColor : "bg-red-100", !answerInput.trim() ? "w-16 h-24 sm:w-20 sm:h-36" : ""].join(" ")}>{answerStatus === "correcting" ? question[2] : answerInput}</div>
