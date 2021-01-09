@@ -1,6 +1,6 @@
 // Credit: Mateusz Rybczonec
 
-import { useCallback, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { colors } from "tailwindcss/defaultTheme";
 
 export default function CountdownTimer({ width, height, children, isPlaying, className, color }) {
@@ -56,6 +56,7 @@ export default function CountdownTimer({ width, height, children, isPlaying, cla
             timeFraction * FULL_DASH_ARRAY
         ).toFixed(0)} ${FULL_DASH_ARRAY}`);
 
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [timeLeft]);
 
     // useEffect(() => {
