@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+.hand-drawn-border {
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+}
+
 .custom-scrolling::-webkit-scrollbar {
     width: 0.3rem;
     /* background-color: pink;  */
