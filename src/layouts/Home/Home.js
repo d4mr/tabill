@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import FullPager from '../../components/FullPager';
 
 import tabillLogo from '../../assets/images/tabill-logo.svg';
@@ -24,7 +24,7 @@ export default function Home() {
             <div className="text-3xl sm:text-5xl mx-auto">The Tables Drill</div>
             <PrimaryButton onClick={()=>history.push('/game')} className="m-4">
                 <div className="flex items-center">
-                    <img src={playIcon} alt="logo" className="h-10 sm:h-8" draggable={false} />
+                    <img src={playIcon} alt="logo" className="h-6 sm:h-8" draggable={false} />
                 Play
                 </div>
             </PrimaryButton>
