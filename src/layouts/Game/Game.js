@@ -1,11 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import FullPager from '../../components/FullPager';
 // import { useOptions } from '../../providers/options-context';
 import { useQuestion } from '../../providers/question-context';
 
 import Fire from '../../assets/images/fire.svg'
 import { colors } from "tailwindcss/defaultTheme";
-import CountdownTimer from '../../components/CountdownTimer';
+import CountdownTimer from '../../components/CountdownTimerControlled';
+import PrimaryButton from '../../components/PrimaryButton';
+
+import PauseIcon from '../../assets/images/pause.svg';
 
 // import { Redirect } from 'react-router-dom';
 // import PrimaryButton from '../../components/PrimaryButton';
@@ -15,70 +18,92 @@ import CountdownTimer from '../../components/CountdownTimer';
 // import Sidebar from './Sidebar/Sidebar';
 
 export default function Game() {
+    const TIME_LIMIT = 2000;
     const [answerInput, setAnswerInput] = useState("");
-    const [answerStatus, setAnswerStatus] = useState("answering");
-    const [bg, setBg] = useState("");
-    const [answerColor, setAnswerColor] = useState("");
-    const [streak, setStreak] = useState(0);
-    const [timer, setTimer] = useState();
 
-    // const { maxMultiple, setMaxMultiple, tablesBeingAsked, setTablesBeingAsked } = useOptions();
+    const [answerStatus, setAnswerStatus] = useState("answering");
+
+    const [streak, setStreak] = useState(0);
+
+    const [startTime, setStartTime] = useState(null);
+    const [timeLeft, setTimeLeft] = useState(TIME_LIMIT);
+
+    const [isPaused, setPaused] = useState(false);
+    const [isSeekingUserInteraction, setIsSeekingUserInteraction] = useState(true);
     const { question, nextQuestion } = useQuestion();
 
-    function showCorrectAnswer() {
-        setStreak(0);
-        clearTimeout(timer);
-        setTimer(null);
-        setAnswerStatus("correcting");
-        setTimeout(moveToNextQuestion, 700);
-    }
 
-    function moveToNextQuestion() {
-        clearTimeout(timer);
-        setTimer(null);
-        setAnswerInput("");
+    const moveToNextQuestion = useCallback(() => {
         setAnswerStatus("answering");
+        setAnswerInput("");
+        setStartTime(null);
         nextQuestion();
-    }
+    }, [nextQuestion]);
+
 
     useEffect(() => {
         switch (answerStatus) {
-            case "wrong":
-                clearTimeout(timer);
-                setTimer(null);
-                setBg("bg-red-300");
-                setAnswerColor("text-red-700");
-                setTimeout(() => showCorrectAnswer(), 400);
-                break;
             case "correct":
-                setStreak(streak + 1);
-                clearTimeout(timer);
-                setTimer(null);
-                setBg("bg-green-300");
-                setAnswerColor("text-green-700");
-                setTimeout(() => { moveToNextQuestion(); setTimer(setTimeout(showCorrectAnswer, 2000)); }, 400);
+                setIsSeekingUserInteraction(false);
+                setStreak(s => s + 1);
+                setTimeout(() => { moveToNextQuestion(); setStartTime(Date.now()); }, 300);
+                break;
+            case "incorrect":
+                setIsSeekingUserInteraction(false);
+                setTimeout(() => setAnswerStatus("correcting"), 500);
                 break;
             case "correcting":
-                clearTimeout(timer);
-                setTimer(null);
-                setBg("bg-blue-300");
-                setAnswerColor("text-blue-700");
+                setTimeout(() => { setStreak(0);moveToNextQuestion(); }, 700);
+                break;
+            case "timeout":
+                setIsSeekingUserInteraction(false);
+                setAnswerStatus("incorrect");
                 break;
             default:
-                setBg("");
-                setAnswerColor("");
+                setTimeLeft(TIME_LIMIT);
+                setIsSeekingUserInteraction(true);
                 break;
         }
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [answerStatus]);
+    }, [answerStatus, moveToNextQuestion]);
 
     useEffect(() => {
-        if (Number(answerInput) > question[2]) {
-            setAnswerStatus("wrong");
-        } else if (Number(answerInput) === question[2]) {
-            setAnswerStatus("correct");
+        if (timeLeft === 0) {
+            return;
+        } else if (timeLeft < 0) {
+            setTimeLeft(0);
+            return;
         }
-    }, [answerInput, question, timer]);
+        if (isPaused || !isSeekingUserInteraction || !startTime) return;
+
+        let timer = setTimeout(() => {
+            setTimeLeft(TIME_LIMIT - Date.now() + startTime);
+        }, 10);
+
+        return () => clearTimeout(timer);
+    }, [timeLeft, isPaused, startTime, isSeekingUserInteraction]);
+
+    useEffect(() => {
+        if (!isSeekingUserInteraction) return;
+        if (timeLeft === 0) {
+            setAnswerStatus("timeout");
+            return;
+        } else {
+            if (Number(answerInput) > question[2]) {
+                setAnswerStatus("incorrect");
+            } else if (Number(answerInput) === question[2]) {
+                setAnswerStatus("correct");
+            }
+        }
+    }, [answerInput, isSeekingUserInteraction, question, timeLeft])
+
+    // useEffect(() => {
+    //     if (isPaused && timer) {
+    //         clearTimeout(timer);
+    //         setTimer(null);
+    //     } else if (!isPaused && !timer) {
+    //         moveToNextQuestion();
+    //     }
+    // }, [isPaused, moveToNextQuestion, timer]);
 
     // const user = useUser().user;
     // const auth = useAuth();
@@ -87,14 +112,17 @@ export default function Game() {
 
     return <>
         <FullPager noScroll flexCol className="bg-doodle-pattern">
-            <div className={["absolute h-full w-full top-0 left-0 opacity-70", bg?bg:""].join(" ")}></div>
+            <div className={["absolute h-full w-full top-0 left-0 opacity-70 z-10", answerStatus === "correct" ? "bg-green-300" : "", answerStatus === "incorrect" ? "bg-red-300" : "", answerStatus === "correcting" ? "bg-blue-300" : "", answerStatus === "answering" ? "hidden" : ""].join(" ")}></div>
+            <div className={["absolute top-0 left-0 bg-white mt-5 ml-5", answerStatus === "answering" ? "z-20" : "z-0"].join(" ")}>
+                <PrimaryButton onClick={() => setPaused(true)} >
+                    <img src={PauseIcon} className="h-8 sm:h-10" alt="pause" />
+                </PrimaryButton>
+            </div>
             <div className="z-10 flex-grow flex flex-col justify-center items-center">
                 <div>
                     <CountdownTimer
                         className="h-20 w-20 sm:h-36 sm:w-36"
-                        key={question}
-                        isPlaying={timer ? true : false}
-                        duration={2}
+                        progressRatio={timeLeft/TIME_LIMIT}
                         color={colors.green[700]}
                     >
                         <div>
@@ -107,12 +135,14 @@ export default function Game() {
                 </div>
                 <div className="text-6xl sm:text-8xl flex mx-auto items-center py-20">
                     <div className="pr-4">{question[0]} x {question[1]} =</div>
-                    <div className={["p-5", answerColor ? answerColor : "bg-red-100 hand-drawn-border border-4 border-black", !answerInput.trim() ? "w-16 h-24 sm:w-20 sm:h-36" : ""].join(" ")}>{answerStatus === "correcting" ? question[2] : answerInput}</div>
+                    <div className={["p-5", answerStatus === "correct" ? "text-green-700" : "", answerStatus === "incorrect" ? "text-red-700" : "", answerStatus === "correcting" ? "text-blue-700" : "", answerStatus === "answering" ? "bg-red-100 hand-drawn-border border-4 border-black" : "", !answerInput.trim() ? "w-16 h-24 sm:w-20 sm:h-36" : ""].join(" ")}>
+                        {answerStatus === "correcting" ? question[2] : answerInput}
+                    </div>
                 </div>
             </div>
 
             <div className="absolute top-0 left-0 w-0 h-1 overflow-hidden">
-                <input type="number" className="block m-0 p-0 w-1 outline-none border-none" autoFocus={true} onBlur={({ target }) => target.focus()} value={answerInput} onChange={(e) => (answerStatus === "answering") && setAnswerInput(e.target.value)} />
+                <input type="number" className="block m-0 p-0 w-1 outline-none border-none" autoFocus={true} onBlur={({ target }) => target.focus()} value={answerInput} onChange={(e) => isSeekingUserInteraction && setAnswerInput(e.target.value)} />
             </div>
 
         </FullPager>

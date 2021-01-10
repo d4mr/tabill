@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { colors } from "tailwindcss/defaultTheme";
 
-export default function CountdownTimer({ width, height, children, isPlaying, className, color }) {
+export default function CountdownTimer({ children, isPlaying, className, color }) {
     const RADIUS = 40;
     const FULL_DASH_ARRAY = 2 * Math.PI * RADIUS;
     // const WARNING_THRESHOLD = 1500;
