@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import FullPager from '../../components/FullPager';
 // import { useOptions } from '../../providers/options-context';
 import { useQuestion } from '../../providers/question-context';
@@ -8,7 +8,9 @@ import { colors } from "tailwindcss/defaultTheme";
 import CountdownTimer from '../../components/CountdownTimerControlled';
 import PrimaryButton from '../../components/PrimaryButton';
 
-import PauseIcon from '../../assets/images/pause.svg';
+import PauseMenu from './PauseMenu';
+import GameOverMenu from './GameOverMenu';
+import { useHistory } from 'react-router-dom';
 
 // import { Redirect } from 'react-router-dom';
 // import PrimaryButton from '../../components/PrimaryButton';
@@ -18,10 +20,13 @@ import PauseIcon from '../../assets/images/pause.svg';
 // import Sidebar from './Sidebar/Sidebar';
 
 export default function Game() {
+    const history = useHistory();
     const TIME_LIMIT = 2000;
+    const hiddenInputField = useRef(null);
     const [answerInput, setAnswerInput] = useState("");
 
     const [answerStatus, setAnswerStatus] = useState("answering");
+    const [gameOverMenuStatus, setGameOverMenuStatus] = useState(false);
 
     const [streak, setStreak] = useState(0);
 
@@ -32,7 +37,6 @@ export default function Game() {
     const [isSeekingUserInteraction, setIsSeekingUserInteraction] = useState(true);
     const { question, nextQuestion } = useQuestion();
 
-
     const moveToNextQuestion = useCallback(() => {
         setAnswerStatus("answering");
         setAnswerInput("");
@@ -40,6 +44,9 @@ export default function Game() {
         nextQuestion();
     }, [nextQuestion]);
 
+    useEffect(() => {
+        hiddenInputField && hiddenInputField.current && !gameOverMenuStatus && hiddenInputField.current.focus();
+    }, [hiddenInputField, gameOverMenuStatus]);
 
     useEffect(() => {
         switch (answerStatus) {
@@ -53,7 +60,7 @@ export default function Game() {
                 setTimeout(() => setAnswerStatus("correcting"), 500);
                 break;
             case "correcting":
-                setTimeout(() => { setStreak(0);moveToNextQuestion(); }, 700);
+                setTimeout(() => { setGameOverMenuStatus(true); moveToNextQuestion(); }, 700);
                 break;
             case "timeout":
                 setIsSeekingUserInteraction(false);
@@ -73,6 +80,7 @@ export default function Game() {
             setTimeLeft(0);
             return;
         }
+
         if (isPaused || !isSeekingUserInteraction || !startTime) return;
 
         let timer = setTimeout(() => {
@@ -111,18 +119,20 @@ export default function Game() {
     //     : 
 
     return <>
-        <FullPager noScroll flexCol className="bg-doodle-pattern">
+        <FullPager noScroll flexCol className="bg-doodle-pattern" onKeyDown={e => { e.key === "Escape" && streak===0 && history.push("/")}}>
             <div className={["absolute h-full w-full top-0 left-0 opacity-70 z-10", answerStatus === "correct" ? "bg-green-300" : "", answerStatus === "incorrect" ? "bg-red-300" : "", answerStatus === "correcting" ? "bg-blue-300" : "", answerStatus === "answering" ? "hidden" : ""].join(" ")}></div>
-            <div className={["absolute top-0 left-0 bg-white mt-5 ml-5", answerStatus === "answering" ? "z-20" : "z-0"].join(" ")}>
-                <PrimaryButton onClick={() => setPaused(true)} >
-                    <img src={PauseIcon} className="h-8 sm:h-10" alt="pause" />
+            <div className={["absolute top-0 left-0 bg-white mt-5 ml-5", answerStatus === "answering" ? "z-20" : "z-0", streak !== 0 ? "hidden" : ""].join(" ")}>
+                <PrimaryButton onClick={() => { history.push("/") }}>
+                <i className="flaticon-exit-hand-drawn-interface-symbol-variant"></i>
                 </PrimaryButton>
             </div>
+            <PauseMenu isPaused={isPaused} unpauseHandler={() => { setIsSeekingUserInteraction(true); setPaused(false); moveToNextQuestion(); setStartTime(Date.now()) }} />
+            <GameOverMenu visible={gameOverMenuStatus} playAgainHandler={() => { setStreak(0); setGameOverMenuStatus(false); }} currentStreak={streak} />
             <div className="z-10 flex-grow flex flex-col justify-center items-center">
                 <div>
                     <CountdownTimer
                         className="h-20 w-20 sm:h-36 sm:w-36"
-                        progressRatio={timeLeft/TIME_LIMIT}
+                        progressRatio={timeLeft / TIME_LIMIT}
                         color={colors.green[700]}
                     >
                         <div>
@@ -141,8 +151,8 @@ export default function Game() {
                 </div>
             </div>
 
-            <div className="absolute top-0 left-0 w-0 h-1 overflow-hidden">
-                <input type="number" className="block m-0 p-0 w-1 outline-none border-none" autoFocus={true} onBlur={({ target }) => target.focus()} value={answerInput} onChange={(e) => isSeekingUserInteraction && setAnswerInput(e.target.value)} />
+            <div className="absolute top-0 left-0 w-0 h-1 overflow-hidden" hidden={gameOverMenuStatus}>
+                <input type="number" ref={hiddenInputField} className="block m-0 p-0 w-1 outline-none border-none" autoFocus={true} onBlur={({ target }) => target.focus()} value={answerInput} onChange={(e) => isSeekingUserInteraction && setAnswerInput(e.target.value)} />
             </div>
 
         </FullPager>

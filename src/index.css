@@ -19,7 +19,3 @@
     border-radius: 10px;
     background-color: rgba(0,0,0, 0.4);
 }
-
-@font-face {font-family: "Alsina";
-    src: url("assets/fonts/Alsina.ttf") format("truetype"); /* chrome firefox opera Safari, Android, iOS 4.2+*/
-}

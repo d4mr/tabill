@@ -1,0 +1,1606 @@
+	/*
+  	Flaticon icon font: Flaticon
+  	Creation date: 22/06/2016 15:04
+  	*/
+
+	@font-face {
+	  font-family: "Flaticon";
+	  src: url("./Flaticon.eot");
+	  src: url("./Flaticon.eot?#iefix") format("embedded-opentype"),
+	    url("./Flaticon.woff") format("woff"),
+	    url("./Flaticon.ttf") format("truetype"),
+	    url("./Flaticon.svg#Flaticon") format("svg");
+	  font-weight: normal;
+	  font-style: normal;
+	}
+
+	@media screen and (-webkit-min-device-pixel-ratio:0) {
+	  @font-face {
+	    font-family: "Flaticon";
+	    src: url("./Flaticon.svg#Flaticon") format("svg");
+	  }
+	}
+
+	[class^="flaticon-"]:before,
+	[class*=" flaticon-"]:before,
+	[class^="flaticon-"]:after,
+	[class*=" flaticon-"]:after {
+	  font-family: Flaticon;
+	  font-style: normal;
+	}
+
+	.flaticon-abacus-hand-drawn-tool:before {
+	  content: "\f100";
+	}
+
+	.flaticon-add-folder-hand-drawn-interface-symbol:before {
+	  content: "\f101";
+	}
+
+	.flaticon-add-hand-drawn-button-outline:before {
+	  content: "\f102";
+	}
+
+	.flaticon-add-suitcase-hand-drawn-symbol:before {
+	  content: "\f103";
+	}
+
+	.flaticon-add-text-interface-hand-drawn-symbol-outline:before {
+	  content: "\f104";
+	}
+
+	.flaticon-add-to-list-hand-drawn-interface-symbol:before {
+	  content: "\f105";
+	}
+
+	.flaticon-add-user-hand-drawn-outline:before {
+	  content: "\f106";
+	}
+
+	.flaticon-address-book-hand-drawn-outline:before {
+	  content: "\f107";
+	}
+
+	.flaticon-agenda-hand-drawn-tool-outline:before {
+	  content: "\f108";
+	}
+
+	.flaticon-alert-hand-drawn-sign:before {
+	  content: "\f109";
+	}
+
+	.flaticon-alert-hand-drawn-symbol:before {
+	  content: "\f10a";
+	}
+
+	.flaticon-alien-hand-drawn-head-outline:before {
+	  content: "\f10b";
+	}
+
+	.flaticon-american-football-ball-hand-drawn-outline:before {
+	  content: "\f10c";
+	}
+
+	.flaticon-analytics-hand-drawn-lines:before {
+	  content: "\f10d";
+	}
+
+	.flaticon-anchor-hand-drawn-tool:before {
+	  content: "\f10e";
+	}
+
+	.flaticon-android-hand-drawn-logo-outline:before {
+	  content: "\f10f";
+	}
+
+	.flaticon-apple-brand-hand-drawn-logo-outline:before {
+	  content: "\f110";
+	}
+
+	.flaticon-apple-hand-drawn-fruit-outline:before {
+	  content: "\f111";
+	}
+
+	.flaticon-arch-with-arrow-hand-drawn-tool:before {
+	  content: "\f112";
+	}
+
+	.flaticon-archive-hand-drawn-box-symbol:before {
+	  content: "\f113";
+	}
+
+	.flaticon-arroba-hand-drawn-symbol:before {
+	  content: "\f114";
+	}
+
+	.flaticon-arrow-point-hand-drawn-outline-pointing-to-right-direction:before {
+	  content: "\f115";
+	}
+
+	.flaticon-arrow-pointing-to-left-hand-drawn-outline:before {
+	  content: "\f116";
+	}
+
+	.flaticon-arrow-pointing-to-right-hand-drawn-symbol:before {
+	  content: "\f117";
+	}
+
+	.flaticon-arrow-pointing-up-hand-drawn-symbol:before {
+	  content: "\f118";
+	}
+
+	.flaticon-arrows-hand-drawn-interface-symbol-outlines:before {
+	  content: "\f119";
+	}
+
+	.flaticon-atom-hand-drawn-symbol:before {
+	  content: "\f11a";
+	}
+
+	.flaticon-attention-hand-drawn-symbol-of-an-exclamation-sign-inside-bald-head-from-side-view:before {
+	  content: "\f11b";
+	}
+
+	.flaticon-back-arrow-hand-drawn-sign:before {
+	  content: "\f11c";
+	}
+
+	.flaticon-back-arrow-pointing-left-hand-drawn-symbol:before {
+	  content: "\f11d";
+	}
+
+	.flaticon-back-hand-drawn-arrow:before {
+	  content: "\f11e";
+	}
+
+	.flaticon-back-hand-drawn-arrow-outline:before {
+	  content: "\f11f";
+	}
+
+	.flaticon-baggage-suitcase-hand-drawn-outline-from-side-view:before {
+	  content: "\f120";
+	}
+
+	.flaticon-balance-scale-hand-drawn-symbol:before {
+	  content: "\f121";
+	}
+
+	.flaticon-balloon-hand-drawn-outline:before {
+	  content: "\f122";
+	}
+
+	.flaticon-bars-graphic-hand-drawn-outlines:before {
+	  content: "\f123";
+	}
+
+	.flaticon-bars-graphic-up-hand-drawn-symbol:before {
+	  content: "\f124";
+	}
+
+	.flaticon-battery-two-thirds-status-hand-drawn-outline:before {
+	  content: "\f125";
+	}
+
+	.flaticon-beer-jar-hand-drawn-outline:before {
+	  content: "\f126";
+	}
+
+	.flaticon-behance-hand-drawn-symbol:before {
+	  content: "\f127";
+	}
+
+	.flaticon-bell-hand-drawn-interface-symbol:before {
+	  content: "\f128";
+	}
+
+	.flaticon-bike-hand-drawn-transport:before {
+	  content: "\f129";
+	}
+
+	.flaticon-bird-part-meat-hand-drawn-outline:before {
+	  content: "\f12a";
+	}
+
+	.flaticon-bomb-hand-drawn-interface-symbol-outline:before {
+	  content: "\f12b";
+	}
+
+	.flaticon-book-hand-drawn-open-pages:before {
+	  content: "\f12c";
+	}
+
+	.flaticon-bookmark-hand-drawn-outline:before {
+	  content: "\f12d";
+	}
+
+	.flaticon-bookmarks-hand-drawn-outline:before {
+	  content: "\f12e";
+	}
+
+	.flaticon-box-package-with-an-up-arrow-hand-drawn-symbol:before {
+	  content: "\f12f";
+	}
+
+	.flaticon-box-with-an-arrow-sign-pointing-down-hand-drawn-symbol:before {
+	  content: "\f130";
+	}
+
+	.flaticon-boy-hand-drawn-face:before {
+	  content: "\f131";
+	}
+
+	.flaticon-bright-hand-drawn-button-sign:before {
+	  content: "\f132";
+	}
+
+	.flaticon-bright-hand-drawn-interface-symbol-outline:before {
+	  content: "\f133";
+	}
+
+	.flaticon-bug-hand-drawn-symbol:before {
+	  content: "\f134";
+	}
+
+	.flaticon-business-graphic-down-hand-drawn-symbol:before {
+	  content: "\f135";
+	}
+
+	.flaticon-business-man-hand-drawn-outline:before {
+	  content: "\f136";
+	}
+
+	.flaticon-business-report-graphic-with-descendant-line-hand-drawn-symbol:before {
+	  content: "\f137";
+	}
+
+	.flaticon-calculator-hand-drawn-tool:before {
+	  content: "\f138";
+	}
+
+	.flaticon-calendar-hand-drawn-tool:before {
+	  content: "\f139";
+	}
+
+	.flaticon-cancel-circular-button-with-a-cross-inside-hand-drawn-outlines:before {
+	  content: "\f13a";
+	}
+
+	.flaticon-cancel-hand-drawn-cross-in-square-button-outline:before {
+	  content: "\f13b";
+	}
+
+	.flaticon-cancel-suitcase-hand-drawn-interface-symbol:before {
+	  content: "\f13c";
+	}
+
+	.flaticon-cancer-ribbon-hand-drawn-outline:before {
+	  content: "\f13d";
+	}
+
+	.flaticon-chat-bubble-hand-drawn-outline:before {
+	  content: "\f13e";
+	}
+
+	.flaticon-chat-bubbles-couple-hand-drawn-outlines:before {
+	  content: "\f13f";
+	}
+
+	.flaticon-checkmark-hand-drawn-outline:before {
+	  content: "\f140";
+	}
+
+	.flaticon-chemical-hand-drawn-container:before {
+	  content: "\f141";
+	}
+
+	.flaticon-chicken-hand-drawn-outline:before {
+	  content: "\f142";
+	}
+
+	.flaticon-clip-hand-drawn-shape:before {
+	  content: "\f143";
+	}
+
+	.flaticon-clipboard-hand-drawn-interface-symbol:before {
+	  content: "\f144";
+	}
+
+	.flaticon-clipboard-hand-drawn-symbol:before {
+	  content: "\f145";
+	}
+
+	.flaticon-clipboard-with-checkmark-hand-drawn-symbol:before {
+	  content: "\f146";
+	}
+
+	.flaticon-closed-tag-hand-drawn-signs:before {
+	  content: "\f147";
+	}
+
+	.flaticon-cloud-hand-drawn-outline:before {
+	  content: "\f148";
+	}
+
+	.flaticon-codebar-hand-drawn-lines-and-numbers:before {
+	  content: "\f149";
+	}
+
+	.flaticon-coffee-glass-hand-drawn-outline:before {
+	  content: "\f14a";
+	}
+
+	.flaticon-coffee-hot-mug-hand-drawn-outline:before {
+	  content: "\f14b";
+	}
+
+	.flaticon-cogwheel-hand-drawn-outline:before {
+	  content: "\f14c";
+	}
+
+	.flaticon-coins-stacks-of-dollars-hand-drawn-commercial-symbol:before {
+	  content: "\f14d";
+	}
+
+	.flaticon-compass-hand-drawn-circular-tool-outline:before {
+	  content: "\f14e";
+	}
+
+	.flaticon-completed-tasks-hand-drawn-clipboard-sign-with-verification-mark:before {
+	  content: "\f14f";
+	}
+
+	.flaticon-cone-for-traffic-hand-drawn-tool:before {
+	  content: "\f150";
+	}
+
+	.flaticon-configuration-hand-drawn-couple-of-cogwheels-outlines:before {
+	  content: "\f151";
+	}
+
+	.flaticon-configuration-hand-drawn-interface-symbol-of-tools-a-pencil-and-a-wrench-cross:before {
+	  content: "\f152";
+	}
+
+	.flaticon-connection-hand-drawn-symbol:before {
+	  content: "\f153";
+	}
+
+	.flaticon-connection-hand-drawn-symbol-1:before {
+	  content: "\f154";
+	}
+
+	.flaticon-contacts-book-hand-drawn:before {
+	  content: "\f155";
+	}
+
+	.flaticon-crane-hand-drawn-bones-outline:before {
+	  content: "\f156";
+	}
+
+	.flaticon-crown-hand-drawn-outline:before {
+	  content: "\f157";
+	}
+
+	.flaticon-css-file-hand-drawn-outline:before {
+	  content: "\f158";
+	}
+
+	.flaticon-cupcake-hand-drawn-dessert:before {
+	  content: "\f159";
+	}
+
+	.flaticon-cutlery:before {
+	  content: "\f15a";
+	}
+
+	.flaticon-cycle-couple-of-arrows-hand-drawn-lines:before {
+	  content: "\f15b";
+	}
+
+	.flaticon-dashboard-hand-drawn-tool:before {
+	  content: "\f15c";
+	}
+
+	.flaticon-database-hand-drawn-interface-symbol-outline:before {
+	  content: "\f15d";
+	}
+
+	.flaticon-delete-cloud-file-hand-drawn-interface-symbol:before {
+	  content: "\f15e";
+	}
+
+	.flaticon-delete-folder-hand-drawn-outline:before {
+	  content: "\f15f";
+	}
+
+	.flaticon-delete-folder-hand-drawn-symbol-outline-with-minus-sign:before {
+	  content: "\f160";
+	}
+
+	.flaticon-delete-hand-drawn-cross-symbol-outline:before {
+	  content: "\f161";
+	}
+
+	.flaticon-delete-page-hand-drawn-symbol:before {
+	  content: "\f162";
+	}
+
+	.flaticon-delete-user-hand-drawn-symbol:before {
+	  content: "\f163";
+	}
+
+	.flaticon-delicious-hand-drawn-logo:before {
+	  content: "\f164";
+	}
+
+	.flaticon-descending-graphic-hand-drawn-outline:before {
+	  content: "\f165";
+	}
+
+	.flaticon-diamond-hand-drawn-outline-side-view:before {
+	  content: "\f166";
+	}
+
+	.flaticon-directional-arrows-signal-hand-drawn-symbol-pointing-left-and-right-opposite-directions:before {
+	  content: "\f167";
+	}
+
+	.flaticon-directions-of-winds-star-hand-drawn-symbol:before {
+	  content: "\f168";
+	}
+
+	.flaticon-dna-hand-drawn-symbol:before {
+	  content: "\f169";
+	}
+
+	.flaticon-document-file-hand-drawn-symbol:before {
+	  content: "\f16a";
+	}
+
+	.flaticon-document-hand-drawn-outline:before {
+	  content: "\f16b";
+	}
+
+	.flaticon-dont-like-symbol:before {
+	  content: "\f16c";
+	}
+
+	.flaticon-down-arrow-hand-drawn-outline:before {
+	  content: "\f16d";
+	}
+
+	.flaticon-down-arrow-hand-drawn-sign:before {
+	  content: "\f16e";
+	}
+
+	.flaticon-down-arrow-hand-drawn-triangle:before {
+	  content: "\f16f";
+	}
+
+	.flaticon-down-button-hand-drawn-arrow-and-squares-outlines:before {
+	  content: "\f170";
+	}
+
+	.flaticon-down-page-hand-drawn-symbol:before {
+	  content: "\f171";
+	}
+
+	.flaticon-download-hand-drawn-interface-symbol-of-a-tray-with-a-descending-arrow-on-it:before {
+	  content: "\f172";
+	}
+
+	.flaticon-drawers-hand-drawn-tool-outline:before {
+	  content: "\f173";
+	}
+
+	.flaticon-dribbble-hand-drawn-logo:before {
+	  content: "\f174";
+	}
+
+	.flaticon-dropper-hand-drawn-outline:before {
+	  content: "\f175";
+	}
+
+	.flaticon-edit-hand-drawn-interface-symbol:before {
+	  content: "\f176";
+	}
+
+	.flaticon-edit-note-hand-drawn-interface-symbol:before {
+	  content: "\f177";
+	}
+
+	.flaticon-eject-hand-drawn-symbol:before {
+	  content: "\f178";
+	}
+
+	.flaticon-empty-battery-hand-drawn-interface-symbol:before {
+	  content: "\f179";
+	}
+
+	.flaticon-eps-vector-file-hand-drawn-symbol:before {
+	  content: "\f17a";
+	}
+
+	.flaticon-euro-hand-drawn-currency-symbol:before {
+	  content: "\f17b";
+	}
+
+	.flaticon-exit-hand-drawn-interface-symbol:before {
+	  content: "\f17c";
+	}
+
+	.flaticon-exit-hand-drawn-interface-symbol-variant:before {
+	  content: "\f17d";
+	}
+
+	.flaticon-expand-hand-drawn-interface-arrows-symbol-outline:before {
+	  content: "\f17e";
+	}
+
+	.flaticon-expand-hand-drawn-interface-symbol-of-two-opposite-arrows-outlines:before {
+	  content: "\f17f";
+	}
+
+	.flaticon-export-hand-drawn-symbol:before {
+	  content: "\f180";
+	}
+
+	.flaticon-eye-hand-drawn-variant:before {
+	  content: "\f181";
+	}
+
+	.flaticon-facebook-letter-logo-in-a-square-hand-drawn-outline:before {
+	  content: "\f182";
+	}
+
+	.flaticon-factory-hand-drawn-building-outline:before {
+	  content: "\f183";
+	}
+
+	.flaticon-favorite-user-hand-drawn-interface-symbol:before {
+	  content: "\f184";
+	}
+
+	.flaticon-feather-hand-drawn-outline:before {
+	  content: "\f185";
+	}
+
+	.flaticon-female-hand-drawn-symbol-outline:before {
+	  content: "\f186";
+	}
+
+	.flaticon-fire-hand-drawn-flames-outlines:before {
+	  content: "\f187";
+	}
+
+	.flaticon-flag-hand-drawn-outline:before {
+	  content: "\f188";
+	}
+
+	.flaticon-fonts-hand-drawn-symbol-outline:before {
+	  content: "\f189";
+	}
+
+	.flaticon-forward-arrow-hand-drawn-button:before {
+	  content: "\f18a";
+	}
+
+	.flaticon-forward-hand-drawn-arrow-pointing-to-right:before {
+	  content: "\f18b";
+	}
+
+	.flaticon-foursquare-hand-drawn-logo-outline:before {
+	  content: "\f18c";
+	}
+
+	.flaticon-free-tag-hand-drawn-sign:before {
+	  content: "\f18d";
+	}
+
+	.flaticon-full-battery-symbol-hand-drawn-outline:before {
+	  content: "\f18e";
+	}
+
+	.flaticon-funnel-hand-drawn-symbol:before {
+	  content: "\f18f";
+	}
+
+	.flaticon-gallery-hand-drawn-interface-symbol-of-irregular-squares-outlines:before {
+	  content: "\f190";
+	}
+
+	.flaticon-game-controller-hand-drawn-tool:before {
+	  content: "\f191";
+	}
+
+	.flaticon-gif-image-file-hand-drawn-outline:before {
+	  content: "\f192";
+	}
+
+	.flaticon-gift-box-hand-drawn-outline:before {
+	  content: "\f193";
+	}
+
+	.flaticon-glass-hand-drawn-outline:before {
+	  content: "\f194";
+	}
+
+	.flaticon-go-to-the-top-hand-drawn-interface-symbol-with-an-arrow-pointing-up-to-a-thin-rectangle:before {
+	  content: "\f195";
+	}
+
+	.flaticon-graduate-hand-drawn-hat-outline:before {
+	  content: "\f196";
+	}
+
+	.flaticon-gym-dumbbell-hand-drawn-tool:before {
+	  content: "\f197";
+	}
+
+	.flaticon-hand-drawn-google-plus-logo:before {
+	  content: "\f198";
+	}
+
+	.flaticon-hdd-hand-drawn-symbol-outline:before {
+	  content: "\f199";
+	}
+
+	.flaticon-headphones-hand-drawn-tool:before {
+	  content: "\f19a";
+	}
+
+	.flaticon-heart-hand-drawn-symbol-outline:before {
+	  content: "\f19b";
+	}
+
+	.flaticon-heart-with-cupid-arrow-hand-drawn-symbol:before {
+	  content: "\f19c";
+	}
+
+	.flaticon-horseshoe-with-holes-hand-drawn-outline:before {
+	  content: "\f19d";
+	}
+
+	.flaticon-hot-dog-hand-drawn-food-outline:before {
+	  content: "\f19e";
+	}
+
+	.flaticon-house-hand-drawn-outline:before {
+	  content: "\f19f";
+	}
+
+	.flaticon-html-file-hand-drawn-symbol:before {
+	  content: "\f1a0";
+	}
+
+	.flaticon-ice-cream-on-a-cone-hand-drawn-dessert:before {
+	  content: "\f1a1";
+	}
+
+	.flaticon-id-hand-drawn-symbol:before {
+	  content: "\f1a2";
+	}
+
+	.flaticon-idea-hand-drawn-symbol-of-a-side-head-with-a-lightbulb-inside:before {
+	  content: "\f1a3";
+	}
+
+	.flaticon-illustrator-file-hand-drawn-interface-symbol:before {
+	  content: "\f1a4";
+	}
+
+	.flaticon-inbox-hand-drawn-tray-symbol-with-an-arrow:before {
+	  content: "\f1a5";
+	}
+
+	.flaticon-inbox-hand-drawn-tray-with-arrow:before {
+	  content: "\f1a6";
+	}
+
+	.flaticon-incomplete-hand-drawn-symbol:before {
+	  content: "\f1a7";
+	}
+
+	.flaticon-increase-zoom-hand-drawn-symbol:before {
+	  content: "\f1a8";
+	}
+
+	.flaticon-infinite-hand-drawn-sign:before {
+	  content: "\f1a9";
+	}
+
+	.flaticon-information-hand-drawn-circular-button:before {
+	  content: "\f1aa";
+	}
+
+	.flaticon-information-hand-drawn-irregular-button:before {
+	  content: "\f1ab";
+	}
+
+	.flaticon-instagram-hand-drawn-logo:before {
+	  content: "\f1ac";
+	}
+
+	.flaticon-java-script-hand-drawn-file:before {
+	  content: "\f1ad";
+	}
+
+	.flaticon-join-of-four-arrows-hand-drawn-outlines:before {
+	  content: "\f1ae";
+	}
+
+	.flaticon-jpg-hand-drawn-file-symbol:before {
+	  content: "\f1af";
+	}
+
+	.flaticon-jump-hand-drawn-arrow:before {
+	  content: "\f1b0";
+	}
+
+	.flaticon-key-hand-drawn-outline:before {
+	  content: "\f1b1";
+	}
+
+	.flaticon-keyboard-hand-drawn-irregular-tool-shape-outline:before {
+	  content: "\f1b2";
+	}
+
+	.flaticon-kilometers-route-signal-hand-drawn-outline:before {
+	  content: "\f1b3";
+	}
+
+	.flaticon-lantern-on-hand-drawn-tool-outline:before {
+	  content: "\f1b4";
+	}
+
+	.flaticon-leaf-hand-drawn-shape:before {
+	  content: "\f1b5";
+	}
+
+	.flaticon-left-arrow-hand-drawn-outline:before {
+	  content: "\f1b6";
+	}
+
+	.flaticon-left-arrow-hand-drawn-triangle:before {
+	  content: "\f1b7";
+	}
+
+	.flaticon-left-arrow-hand-drawn-triangular-shape:before {
+	  content: "\f1b8";
+	}
+
+	.flaticon-left-button-with-an-arrow-hand-drawn-symbol:before {
+	  content: "\f1b9";
+	}
+
+	.flaticon-less-zoom-hand-drawn-symbol:before {
+	  content: "\f1ba";
+	}
+
+	.flaticon-life-guard-hand-drawn-tool:before {
+	  content: "\f1bb";
+	}
+
+	.flaticon-lifeline-hand-drawn-status-line:before {
+	  content: "\f1bc";
+	}
+
+	.flaticon-lightbulb-hand-drawn-symbol:before {
+	  content: "\f1bd";
+	}
+
+	.flaticon-like-thumb-up-hand-drawn-symbol-outline:before {
+	  content: "\f1be";
+	}
+
+	.flaticon-link-hand-drawn-interface-symbol:before {
+	  content: "\f1bf";
+	}
+
+	.flaticon-link-hand-drawn-symbol:before {
+	  content: "\f1c0";
+	}
+
+	.flaticon-linkedin-logo-hand-drawn-outline:before {
+	  content: "\f1c1";
+	}
+
+	.flaticon-list-items-hand-drawn-symbol-outlines:before {
+	  content: "\f1c2";
+	}
+
+	.flaticon-list-menu-hand-drawn-symbol-of-three-thin-rectangles-outlines:before {
+	  content: "\f1c3";
+	}
+
+	.flaticon-list-paper-hand-drawn-symbol:before {
+	  content: "\f1c4";
+	}
+
+	.flaticon-location-pin-hand-drawn-sign:before {
+	  content: "\f1c5";
+	}
+
+	.flaticon-lock-hand-drawn-padlock-symbol:before {
+	  content: "\f1c6";
+	}
+
+	.flaticon-love-hand-drawn-couple-of-hearts:before {
+	  content: "\f1c7";
+	}
+
+	.flaticon-love-hand-drawn-heart-symbol-outline:before {
+	  content: "\f1c8";
+	}
+
+	.flaticon-low-battery-hand-drawn-interface-symbol:before {
+	  content: "\f1c9";
+	}
+
+	.flaticon-magic-wand-hand-drawn-tool:before {
+	  content: "\f1ca";
+	}
+
+	.flaticon-magnet-hand-drawn-tool-outline:before {
+	  content: "\f1cb";
+	}
+
+	.flaticon-magnifying-glass-hand-drawn-tool:before {
+	  content: "\f1cc";
+	}
+
+	.flaticon-mail-envelope-back-hand-drawn-outline:before {
+	  content: "\f1cd";
+	}
+
+	.flaticon-male-hand-drawn-symbol-outline:before {
+	  content: "\f1ce";
+	}
+
+	.flaticon-map-hand-drawn-paper:before {
+	  content: "\f1cf";
+	}
+
+	.flaticon-map-location-hand-drawn-interface-symbol:before {
+	  content: "\f1d0";
+	}
+
+	.flaticon-megaphone-hand-drawn-tool-outline:before {
+	  content: "\f1d1";
+	}
+
+	.flaticon-menu-curve-lines-variant-hand-drawn-outlines:before {
+	  content: "\f1d2";
+	}
+
+	.flaticon-menu-hand-drawn-lines-outlines:before {
+	  content: "\f1d3";
+	}
+
+	.flaticon-microphone-hand-drawn-voice-interface-symbol-outline:before {
+	  content: "\f1d4";
+	}
+
+	.flaticon-microscope-hand-drawn-tool-outline:before {
+	  content: "\f1d5";
+	}
+
+	.flaticon-minus-sign-in-a-circle-hand-drawn-outlines:before {
+	  content: "\f1d6";
+	}
+
+	.flaticon-minus-sign-inside-a-square-hand-drawn-symbol:before {
+	  content: "\f1d7";
+	}
+
+	.flaticon-money-bag-hand-drawn-variant:before {
+	  content: "\f1d8";
+	}
+
+	.flaticon-money-paper-of-dollars-hand-drawn-symbol:before {
+	  content: "\f1d9";
+	}
+
+	.flaticon-money-stack-hand-drawn-outline:before {
+	  content: "\f1da";
+	}
+
+	.flaticon-money-symbol-hand-drawn-outline:before {
+	  content: "\f1db";
+	}
+
+	.flaticon-monitoring-graphic-hand-drawn-symbol:before {
+	  content: "\f1dc";
+	}
+
+	.flaticon-moon-hand-drawn-circle:before {
+	  content: "\f1dd";
+	}
+
+	.flaticon-moon-phase-hand-drawn-outline:before {
+	  content: "\f1de";
+	}
+
+	.flaticon-mosaic-of-four-hand-drawn-squares-tiles:before {
+	  content: "\f1df";
+	}
+
+	.flaticon-mosaic-of-nine-square-tiles-hand-drawn-symbol:before {
+	  content: "\f1e0";
+	}
+
+	.flaticon-mouse-hand-drawn-tool:before {
+	  content: "\f1e1";
+	}
+
+	.flaticon-mug-coffee-hand-drawn-symbol:before {
+	  content: "\f1e2";
+	}
+
+	.flaticon-musical-note-hand-drawn-outline:before {
+	  content: "\f1e3";
+	}
+
+	.flaticon-musical-symbol-hand-drawn-outline:before {
+	  content: "\f1e4";
+	}
+
+	.flaticon-mustache-and-glasses-hand-drawn-outlines:before {
+	  content: "\f1e5";
+	}
+
+	.flaticon-new-tag-hand-drawn-outline:before {
+	  content: "\f1e6";
+	}
+
+	.flaticon-next-hand-drawn-arrow-pointing-to-right:before {
+	  content: "\f1e7";
+	}
+
+	.flaticon-next-page-hand-drawn-symbol:before {
+	  content: "\f1e8";
+	}
+
+	.flaticon-next-user-hand-drawn-interface-symbol:before {
+	  content: "\f1e9";
+	}
+
+	.flaticon-no-sound-hand-drawn-symbol-of-a-speaker-outline-with-a-cross:before {
+	  content: "\f1ea";
+	}
+
+	.flaticon-octocat-hand-drawn-logo-outline:before {
+	  content: "\f1eb";
+	}
+
+	.flaticon-old-man-hand-drawn-face:before {
+	  content: "\f1ec";
+	}
+
+	.flaticon-open-commercial-signal-hand-drawn-outline:before {
+	  content: "\f1ed";
+	}
+
+	.flaticon-outbox-hand-drawn-symbol:before {
+	  content: "\f1ee";
+	}
+
+	.flaticon-pages-hand-drawn-interface-symbol:before {
+	  content: "\f1ef";
+	}
+
+	.flaticon-paint-brush-hand-drawn-tool:before {
+	  content: "\f1f0";
+	}
+
+	.flaticon-painting-palette-hand-drawn-tool:before {
+	  content: "\f1f1";
+	}
+
+	.flaticon-palm-hand-drawn-tree:before {
+	  content: "\f1f2";
+	}
+
+	.flaticon-paper-file-hand-drawn-symbol:before {
+	  content: "\f1f3";
+	}
+
+	.flaticon-paper-hand-drawn-symbol:before {
+	  content: "\f1f4";
+	}
+
+	.flaticon-paper-list-hand-drawn-symbol:before {
+	  content: "\f1f5";
+	}
+
+	.flaticon-paper-plane-hand-drawn-outline:before {
+	  content: "\f1f6";
+	}
+
+	.flaticon-paper-sheet-hand-drawn-interface-file-symbol:before {
+	  content: "\f1f7";
+	}
+
+	.flaticon-paper-tray-hand-drawn-outline:before {
+	  content: "\f1f8";
+	}
+
+	.flaticon-pause-hand-drawn-symbol:before {
+	  content: "\f1f9";
+	}
+
+	.flaticon-pdf-file-hand-drawn-symbol:before {
+	  content: "\f1fa";
+	}
+
+	.flaticon-pen-hand-drawn-tool-outline:before {
+	  content: "\f1fb";
+	}
+
+	.flaticon-pencil-hand-drawn-tool-outline:before {
+	  content: "\f1fc";
+	}
+
+	.flaticon-phone-hand-drawn-outline:before {
+	  content: "\f1fd";
+	}
+
+	.flaticon-php-file-hand-drawn-interface-symbol:before {
+	  content: "\f1fe";
+	}
+
+	.flaticon-pi-hand-drawn-symbol:before {
+	  content: "\f1ff";
+	}
+
+	.flaticon-picture-hanging-in-a-frame-hand-drawn-symbol:before {
+	  content: "\f200";
+	}
+
+	.flaticon-picture-of-a-landscape-hand-drawn-symbol:before {
+	  content: "\f201";
+	}
+
+	.flaticon-pie-graphic-hand-drawn-business-symbol:before {
+	  content: "\f202";
+	}
+
+	.flaticon-pin-hand-drawn-irregular-outline:before {
+	  content: "\f203";
+	}
+
+	.flaticon-pine-hand-drawn-tree-outline:before {
+	  content: "\f204";
+	}
+
+	.flaticon-pinterest-hand-drawn-logo:before {
+	  content: "\f205";
+	}
+
+	.flaticon-pipe-hand-drawn-tool:before {
+	  content: "\f206";
+	}
+
+	.flaticon-plug-hand-drawn-tool:before {
+	  content: "\f207";
+	}
+
+	.flaticon-plus-hand-drawn-sign:before {
+	  content: "\f208";
+	}
+
+	.flaticon-plus-sign-button-hand-drawn-circle-and-cross-outlines:before {
+	  content: "\f209";
+	}
+
+	.flaticon-png-file-hand-drawn-interface-symbol:before {
+	  content: "\f20a";
+	}
+
+	.flaticon-podium-hand-drawn-outline:before {
+	  content: "\f20b";
+	}
+
+	.flaticon-port-hand-drawn-symbol:before {
+	  content: "\f20c";
+	}
+
+	.flaticon-pound-hand-drawn-currency-symbol-outline:before {
+	  content: "\f20d";
+	}
+
+	.flaticon-power-symbol-variant-hand-drawn-outline:before {
+	  content: "\f20e";
+	}
+
+	.flaticon-previous-button-hand-drawn-outline:before {
+	  content: "\f20f";
+	}
+
+	.flaticon-price-tag-hand-drawn-outline:before {
+	  content: "\f210";
+	}
+
+	.flaticon-private-folder-hand-drawn-outline:before {
+	  content: "\f211";
+	}
+
+	.flaticon-prohibition-hand-drawn-symbol-outline:before {
+	  content: "\f212";
+	}
+
+	.flaticon-psd-photoshop-file-hand-drawn-symbol:before {
+	  content: "\f213";
+	}
+
+	.flaticon-question-mark-inside-a-bald-male-side-head-outline:before {
+	  content: "\f214";
+	}
+
+	.flaticon-question-mark-outline-in-a-circle-hand-drawn-button:before {
+	  content: "\f215";
+	}
+
+	.flaticon-question-sign-hand-drawn-outline:before {
+	  content: "\f216";
+	}
+
+	.flaticon-quote-hand-drawn-symbol:before {
+	  content: "\f217";
+	}
+
+	.flaticon-radiation-hand-drawn-symbol:before {
+	  content: "\f218";
+	}
+
+	.flaticon-radio-flat-hand-drawn-tool-with-an-antenna:before {
+	  content: "\f219";
+	}
+
+	.flaticon-rain-weather-hand-drawn-symbol:before {
+	  content: "\f21a";
+	}
+
+	.flaticon-record-hand-drawn-symbol:before {
+	  content: "\f21b";
+	}
+
+	.flaticon-refresh-circular-arrow-hand-drawn-symbol:before {
+	  content: "\f21c";
+	}
+
+	.flaticon-reload-hand-drawn-arrow:before {
+	  content: "\f21d";
+	}
+
+	.flaticon-repeat-hand-drawn-circular-arrow-symbol:before {
+	  content: "\f21e";
+	}
+
+	.flaticon-rest-hand-drawn-minus-sign-outline:before {
+	  content: "\f21f";
+	}
+
+	.flaticon-revert-hand-drawn-arrows:before {
+	  content: "\f220";
+	}
+
+	.flaticon-right-arrow-hand-drawn-outline:before {
+	  content: "\f221";
+	}
+
+	.flaticon-right-button-hand-drawn-outline:before {
+	  content: "\f222";
+	}
+
+	.flaticon-robot-hand-drawn-outline:before {
+	  content: "\f223";
+	}
+
+	.flaticon-rocket-hand-drawn-outline:before {
+	  content: "\f224";
+	}
+
+	.flaticon-rss-feed-hand-drawn-symbol:before {
+	  content: "\f225";
+	}
+
+	.flaticon-sad-hand-drawn-face:before {
+	  content: "\f226";
+	}
+
+	.flaticon-sale-tag-hand-drawn-commercial-element:before {
+	  content: "\f227";
+	}
+
+	.flaticon-sale-tag-hand-drawn-symbol:before {
+	  content: "\f228";
+	}
+
+	.flaticon-sand-clock-hand-drawn-tool-outline:before {
+	  content: "\f229";
+	}
+
+	.flaticon-save-hand-drawn-interface-floppy-disc-symbol:before {
+	  content: "\f22a";
+	}
+
+	.flaticon-scissors-hand-drawn-tool:before {
+	  content: "\f22b";
+	}
+
+	.flaticon-screen-hand-drawn-tool:before {
+	  content: "\f22c";
+	}
+
+	.flaticon-screwdriver-hand-drawn-tool-outline:before {
+	  content: "\f22d";
+	}
+
+	.flaticon-settings-console-hand-drawn-symbol:before {
+	  content: "\f22e";
+	}
+
+	.flaticon-settings-hand-drawn-symbol:before {
+	  content: "\f22f";
+	}
+
+	.flaticon-share-hand-drawn-symbol:before {
+	  content: "\f230";
+	}
+
+	.flaticon-shopping-bag-hand-drawn-outline-variant:before {
+	  content: "\f231";
+	}
+
+	.flaticon-shopping-cart-hand-drawn-tool:before {
+	  content: "\f232";
+	}
+
+	.flaticon-shuffle-arrows-hand-drawn-symbol:before {
+	  content: "\f233";
+	}
+
+	.flaticon-signal-symbol-hand-drawn-outline:before {
+	  content: "\f234";
+	}
+
+	.flaticon-skype-hand-drawn-logo-outline:before {
+	  content: "\f235";
+	}
+
+	.flaticon-smile-hand-drawn-emoticon:before {
+	  content: "\f236";
+	}
+
+	.flaticon-snowflakes-couple-hand-drawn-outlines:before {
+	  content: "\f237";
+	}
+
+	.flaticon-soccer-ball-hand-drawn-outline:before {
+	  content: "\f238";
+	}
+
+	.flaticon-soda-glass-with-a-straw-hand-drawn-symbol:before {
+	  content: "\f239";
+	}
+
+	.flaticon-sound-hand-drawn-interface-symbol:before {
+	  content: "\f23a";
+	}
+
+	.flaticon-sound-hand-drawn-interface-symbol-of-a-speaker:before {
+	  content: "\f23b";
+	}
+
+	.flaticon-sound-hand-drawn-speaker-interface-symbol:before {
+	  content: "\f23c";
+	}
+
+	.flaticon-sound-hand-drawn-symbol:before {
+	  content: "\f23d";
+	}
+
+	.flaticon-speedometer-hand-drawn-tool:before {
+	  content: "\f23e";
+	}
+
+	.flaticon-squad-hand-drawn-tool:before {
+	  content: "\f23f";
+	}
+
+	.flaticon-square-hand-drawn-shape-outline:before {
+	  content: "\f240";
+	}
+
+	.flaticon-star-badge-hand-drawn-outline:before {
+	  content: "\f241";
+	}
+
+	.flaticon-star-hand-drawn-symbol-outline:before {
+	  content: "\f242";
+	}
+
+	.flaticon-star-of-six-points-variant-hand-drawn-symbol:before {
+	  content: "\f243";
+	}
+
+	.flaticon-star-outline-with-black-smaller-star-inside:before {
+	  content: "\f244";
+	}
+
+	.flaticon-stereo-hand-drawn-audio-tool:before {
+	  content: "\f245";
+	}
+
+	.flaticon-suitcase-hand-drawn-symbol:before {
+	  content: "\f246";
+	}
+
+	.flaticon-sun-hand-drawn-day-symbol:before {
+	  content: "\f247";
+	}
+
+	.flaticon-sun-hand-drawn-symbol:before {
+	  content: "\f248";
+	}
+
+	.flaticon-synchronize-sign-of-a-cloud-with-two-arrows-in-circle-hand-drawn-symbol:before {
+	  content: "\f249";
+	}
+
+	.flaticon-syringe-hand-drawn-tool:before {
+	  content: "\f24a";
+	}
+
+	.flaticon-tablet-hand-drawn-tool-outline:before {
+	  content: "\f24b";
+	}
+
+	.flaticon-tag-hand-drawn-symbol:before {
+	  content: "\f24c";
+	}
+
+	.flaticon-target-hand-drawn-circle:before {
+	  content: "\f24d";
+	}
+
+	.flaticon-telephone-auricular-hand-drawn-outline:before {
+	  content: "\f24e";
+	}
+
+	.flaticon-tennis-shoe-hand-drawn-outline:before {
+	  content: "\f24f";
+	}
+
+	.flaticon-terminal-hand-drawn-symbol:before {
+	  content: "\f250";
+	}
+
+	.flaticon-text-document-hand-drawn-symbol:before {
+	  content: "\f251";
+	}
+
+	.flaticon-thermometer-hand-drawn-tool:before {
+	  content: "\f252";
+	}
+
+	.flaticon-thunder-bolt-hand-drawn-outline:before {
+	  content: "\f253";
+	}
+
+	.flaticon-thunder-bolt-hand-drawn-shape-outline:before {
+	  content: "\f254";
+	}
+
+	.flaticon-thunderstorm-hand-drawn-weather-symbol:before {
+	  content: "\f255";
+	}
+
+	.flaticon-ticket-hand-drawn-outline:before {
+	  content: "\f256";
+	}
+
+	.flaticon-time-hand-drawn-interface-symbol:before {
+	  content: "\f257";
+	}
+
+	.flaticon-tools-hand-drawn-outlines-of-configuration-interface-symbol:before {
+	  content: "\f258";
+	}
+
+	.flaticon-trash-can-hand-drawn-symbol:before {
+	  content: "\f259";
+	}
+
+	.flaticon-tray-hand-drawn-outline:before {
+	  content: "\f25a";
+	}
+
+	.flaticon-tree-hand-drawn-rounded-foliage-shape:before {
+	  content: "\f25b";
+	}
+
+	.flaticon-triangle-hand-drawn-shape-outline:before {
+	  content: "\f25c";
+	}
+
+	.flaticon-trophy-hand-drawn-sportive-cup:before {
+	  content: "\f25d";
+	}
+
+	.flaticon-truck-hand-drawn-transport:before {
+	  content: "\f25e";
+	}
+
+	.flaticon-trumpet-hand-drawn-musical-instrument:before {
+	  content: "\f25f";
+	}
+
+	.flaticon-tv-hand-drawn-outline:before {
+	  content: "\f260";
+	}
+
+	.flaticon-twitter-hand-drawn-logo:before {
+	  content: "\f261";
+	}
+
+	.flaticon-umbrella-hand-drawn-opened-outline:before {
+	  content: "\f262";
+	}
+
+	.flaticon-undo-arrow-hand-drawn-symbol-outline-with-a-cross:before {
+	  content: "\f263";
+	}
+
+	.flaticon-union-hand-drawn-symbol-of-a-line-between-two-circles:before {
+	  content: "\f264";
+	}
+
+	.flaticon-unlock-hand-drawn-padlock-symbol:before {
+	  content: "\f265";
+	}
+
+	.flaticon-up-and-down-arrows-hand-drawn-triangles-couple-outline:before {
+	  content: "\f266";
+	}
+
+	.flaticon-up-and-down-hand-drawn-arrows-couple:before {
+	  content: "\f267";
+	}
+
+	.flaticon-up-arrow-hand-drawn-outline:before {
+	  content: "\f268";
+	}
+
+	.flaticon-up-arrow-hand-drawn-outline-1:before {
+	  content: "\f269";
+	}
+
+	.flaticon-up-arrow-triangle-hand-drawn-outline:before {
+	  content: "\f26a";
+	}
+
+	.flaticon-up-button-hand-drawn-symbol:before {
+	  content: "\f26b";
+	}
+
+	.flaticon-up-page-hand-drawn-interface-symbol:before {
+	  content: "\f26c";
+	}
+
+	.flaticon-upload-file-hand-drawn-interface-symbol:before {
+	  content: "\f26d";
+	}
+
+	.flaticon-upload-hand-drawn-interface-symbol-of-an-up-arrow-in-a-cloud:before {
+	  content: "\f26e";
+	}
+
+	.flaticon-usb-hand-drawn-symbol:before {
+	  content: "\f26f";
+	}
+
+	.flaticon-user-book-hand-drawn-symbol:before {
+	  content: "\f270";
+	}
+
+	.flaticon-user-hand-drawn-outline-in-a-rectangle:before {
+	  content: "\f271";
+	}
+
+	.flaticon-user-head-side-hand-drawn-outline:before {
+	  content: "\f272";
+	}
+
+	.flaticon-user-list-hand-drawn-interface-symbol-outline:before {
+	  content: "\f273";
+	}
+
+	.flaticon-users-couple-hand-drawn-outlines:before {
+	  content: "\f274";
+	}
+
+	.flaticon-vector-lines-hand-drawn-symbol:before {
+	  content: "\f275";
+	}
+
+	.flaticon-video-camera-hand-drawn-interface-symbol-outline:before {
+	  content: "\f276";
+	}
+
+	.flaticon-video-film-hand-drawn-symbol:before {
+	  content: "\f277";
+	}
+
+	.flaticon-video-hand-drawn-symbol:before {
+	  content: "\f278";
+	}
+
+	.flaticon-vimeo-hand-drawn-logo-outline:before {
+	  content: "\f279";
+	}
+
+	.flaticon-water-drop-hand-drawn-outline:before {
+	  content: "\f27a";
+	}
+
+	.flaticon-water-drops-hand-drawn-outlines:before {
+	  content: "\f27b";
+	}
+
+	.flaticon-webcam-hand-drawn-symbol:before {
+	  content: "\f27c";
+	}
+
+	.flaticon-wifi-hand-drawn-symbol:before {
+	  content: "\f27d";
+	}
+
+	.flaticon-wifi-signal-hand-drawn-symbols:before {
+	  content: "\f27e";
+	}
+
+	.flaticon-window-hand-drawn-symbol:before {
+	  content: "\f27f";
+	}
+
+	.flaticon-window-hand-drawn-symbol-for-interface:before {
+	  content: "\f280";
+	}
+
+	.flaticon-windows-hand-drawn-logo-outline:before {
+	  content: "\f281";
+	}
+
+	.flaticon-wine-glass-hand-drawn-outline:before {
+	  content: "\f282";
+	}
+
+	.flaticon-woman-young-head-hand-drawn-outline:before {
+	  content: "\f283";
+	}
+
+	.flaticon-world-grid-hand-drawn-symbol:before {
+	  content: "\f284";
+	}
+
+	.flaticon-wrench-hand-drawn-double-tool-outline:before {
+	  content: "\f285";
+	}
+
+	.flaticon-xls-excel-file-hand-drawn-interface-symbol:before {
+	  content: "\f286";
+	}
+
+	.flaticon-yen-hand-drawn-currency-symbol-outline:before {
+	  content: "\f287";
+	}
+
+	.flaticon-yin-yang-hand-drawn-symbol:before {
+	  content: "\f288";
+	}
+
+	.flaticon-zip-file-hand-drawn-interface-symbol:before {
+	  content: "\f289";
+	}

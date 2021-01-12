@@ -8,6 +8,7 @@ import './index.css';
 // import Auth from './layouts/Auth/Auth.js';
 import Home from './layouts/Home/Home.js';
 import Game from './layouts/Game/Game.js';
+import Settings from './layouts/Settings/Settings.js';
 
 import AppProviders from './providers/context.js';
 
@@ -18,6 +19,7 @@ ReactDOM.render(
                 {/* <Route path="/auth/" render={(props) => <Auth />} /> */}
                 <Route path="/" exact render={(props) => <Home />} />
                 <Route path="/game" exact render={(props) => <Game />} />
+                <Route path="/settings" exact render={(props) => <Settings />} />
                 <Route path="/" render={(props) => <Redirect to="/" />} />
             </Switch>
         </Router>
