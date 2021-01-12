@@ -1,7 +1,6 @@
 import React from 'react';
 import FullPager from '../../components/FullPager';
 
-import tabillLogo from '../../assets/images/tabill-logo.svg';
 import playIcon from '../../assets/images/play.svg';
 import PrimaryButton from '../../components/PrimaryButton';
 import { useHistory } from 'react-router-dom';

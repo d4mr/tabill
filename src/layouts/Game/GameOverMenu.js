@@ -1,7 +1,6 @@
 import { useHistory } from "react-router-dom";
 import PrimaryButton from "../../components/PrimaryButton";
 import Fire from '../../assets/images/fire.svg'
-import { useEffect } from "react";
 
 
 export default function GameOverMenu({ visible, playAgainHandler, currentStreak, className, ...props }) {
